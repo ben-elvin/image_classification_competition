@@ -69,7 +69,7 @@ uploaded_file = st.file_uploader(
 )
 st.markdown("")
 
-col1, col2, col3 = st.columns([1, 1, 1])
+col1, col2, col3 = st.columns([1, 6, 1])
 with col2:
     submit = st.button("Submit model for evaluation", type="primary")
 
@@ -140,5 +140,4 @@ st.markdown(
     "You can submit as many models as you like. "
     "Each submission will appear as a new row in the leaderboard. "
     "Your uploaded model file is deleted after evaluation. "
-    "The hidden test set remains private."
 )
