@@ -6,6 +6,7 @@ import os
 import tempfile
 from PIL import Image
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
 # ==== CONFIGURATION ====
 TEST_IMAGE_DIR = "test_images"
@@ -91,7 +92,7 @@ if submit and uploaded_file and username.strip():
                     if model is not None:
                         try:
                             acc = evaluate_model(model, raw_images, y_test, input_size)
-                            timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                            timestamp = datetime.now(ZoneInfo("Europe/Berlin")).strftime("%Y-%m-%d %H:%M:%S")
                             new_row = {
                                 "Username": username,
                                 "Accuracy": round(acc * 100, 2),
