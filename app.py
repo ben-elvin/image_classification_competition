@@ -45,9 +45,8 @@ def evaluate_model(model, pil_images, y, input_size):
 st.title("Sign Language Model Showdown!")
 st.write(
     "Think your Keras model can tell the difference between German sign language A, B, and C? Put it to the test! ✊🖐️🤏\n\n"
-    "Just upload your trained model as a `.keras` file, and we’ll secretly run it against our hidden set of hand sign photos. "
-    "No peeking! We keep the test set private! 🕵️\n\n"
-    "Your model’s accuracy will appear on our live leaderboard for everyone to see. Top the table and bragging rights are yours! 🏆\n\n"
+    "Just upload your trained model as a `.keras` file, and we’ll run it against our secret set of hand sign photos. 🕵️"
+    "Your model’s accuracy will appear on the leaderboard. Top the table and the bragging rights are yours! 🏆\n\n"
     "We accept models trained on pretty much any image size 64×64, 128×128, 224×224, 256×256. "
     "Just make sure your model expects standard 3-channel (RGB) colour images."
 )
