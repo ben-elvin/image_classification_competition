@@ -42,7 +42,7 @@ def evaluate_model(model, pil_images, y, input_size):
     acc = (y_pred == y).mean()
     return acc
 
-st.title("Sign Language Model Showdown! 🤟")
+st.title("Sign Language Model Showdown!")
 st.write(
     "Think your Keras model can tell the difference between German sign language A, B, and C? Put it to the test! ✊🖐️🤏\n\n"
     "Just upload your trained model as a `.keras` file, and we’ll secretly run it against our hidden set of hand sign photos. "
