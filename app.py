@@ -43,6 +43,7 @@ def evaluate_model(model, pil_images, y, input_size):
     return acc
 
 st.title("Sign Language Model Showdown!")
+st.markdown("")
 
 st.markdown(
     "Can your Keras model tell the difference between A, B, and C? ✊🖐️🤏 Time to put it to the test!"
