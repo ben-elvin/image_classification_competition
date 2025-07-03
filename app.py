@@ -49,13 +49,6 @@ st.write(
     "⭐️ Your model can expect **any input size and shape** (e.g., 64×64, 128×128, 224×224, 256×256, etc.), as long as it expects 3 channels (RGB)."
 )
 
-st.info(
-    "⭐️ **How to save your model:**\n"
-    "```python\nmodel.save('my_model.keras')\n```\n"
-    "- Your model's input layer should be compatible with RGB images.\n"
-    "- Models expecting grayscale (1 channel) images are not supported."
-)
-
 username = st.text_input("Enter your username:")
 uploaded_file = st.file_uploader(
     "Upload your Keras model (`.keras` only)", type=["keras"], accept_multiple_files=False
@@ -64,7 +57,6 @@ submit = st.button("Submit model for evaluation")
 
 leaderboard = load_leaderboard()
 raw_images, y_test = load_raw_test_images()
-st.caption(f"Debug: Loaded {len(raw_images)} test images.")
 
 if submit and uploaded_file and username.strip():
     with st.spinner("Evaluating your model..."):
@@ -77,7 +69,6 @@ if submit and uploaded_file and username.strip():
                 # Accept models with shape (None, H, W, 3)
                 if len(input_shape) == 4 and input_shape[-1] == 3:
                     input_size = (input_shape[1], input_shape[2])  # (height, width)
-                    st.caption(f"Debug: Model expects input size: {input_size}, 3 channels.")
                     if None in input_size:
                         st.error("Model input shape must have concrete dimensions, not None. Please specify fixed input size in your model.")
                         model = None
