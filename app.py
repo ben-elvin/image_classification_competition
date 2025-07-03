@@ -58,7 +58,7 @@ st.info(
 )
 st.markdown("")
 
-st.markdown("👇 **Fill in your username, upload your model, and join the leaderboard fun. Good luck!** 👇")
+st.markdown("👇 **Fill in your username, upload your model, and join the leaderboard. Good luck!** 👇")
 
 username = st.text_input("Enter your username:")
 uploaded_file = st.file_uploader(
