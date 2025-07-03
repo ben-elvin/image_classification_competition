@@ -42,13 +42,28 @@ def evaluate_model(model, pil_images, y, input_size):
     acc = (y_pred == y).mean()
     return acc
 
-st.title("Sign Language Model Showdown!")
-st.write(
-    "Think your Keras model can tell the difference between A, B, and C? Put it to the test! ✊🖐️🤏\n\n"
-    "Just upload your trained model as a `.keras` file, and we’ll run it against our secret set of hand sign photos. 🕵️"
-    "Your model’s accuracy will appear on the leaderboard. Top the table and the bragging rights are yours! 🏆\n\n"
-    "We accept models trained on pretty much any image size 64×64, 128×128, 224×224, 256×256. "
-    "Just make sure your model expects standard 3-channel (RGB) colour images."
+st.title("Sign Language Model Showdown! 🤟")
+
+st.markdown(
+    """
+    **Think your Keras model can tell the difference between A, B, and C?**  
+    _Put it to the test!_
+
+    ---
+    **How does it work?**  
+    Just upload your trained model as a `.keras` file, and we’ll run it against our secret set of hand sign photos. 🕵️  
+    Your model’s accuracy will appear on the leaderboard.  
+    Top the table and the bragging rights are yours! 🏆
+
+    ---
+    **What do you need to know?**
+    - We accept models trained on pretty much any image size:  
+      `64×64`, `128×128`, `224×224`, `256×256`
+    - Just make sure your model expects standard **3-channel (RGB)** colour images.
+
+    ---
+    Good luck! ✊🖐️🤏
+    """
 )
 
 username = st.text_input("Enter your username:")
