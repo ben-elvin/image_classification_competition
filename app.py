@@ -45,31 +45,23 @@ def evaluate_model(model, pil_images, y, input_size):
 st.title("Sign Language Model Showdown! 🤟")
 
 st.markdown(
-    "Think your Keras model can tell the difference between A, B, and C? Put it to the test! ✊🖐️🤏"
+    "Can your Keras model tell the difference between A, B, and C? Time to put it to the test! ✊🖐️🤏"
 )
-
-st.markdown("")  # Space for breathing room
-
-st.write("Ready to see how your model stacks up? Here’s how it works:")
+st.markdown("")
 
 st.info(
-    "Just upload your trained model as a `.keras` file, and we’ll secretly run it on a set of sign language photos you haven’t seen. "
-    "If your model nails it, you’ll see your score up on the leaderboard. Get to the top, and those bragging rights are all yours! 🏆"
+    "Upload your trained `.keras` model, and we’ll secretly run it on a set of sign language photos you haven’t seen. "
+    "If your model nails it, your score pops up on the leaderboard. Top the table, and those bragging rights are all yours! 🏆"
 )
-
-st.markdown("")  # More white space
-
-st.write("What do you need to know? Simple:")
+st.markdown("")
 
 st.success(
-    "- You can use pretty much any image size: 64×64, 128×128, 224×224, 256×256.\n"
-    "- Just make sure your model expects standard **3-channel (RGB)** colour images."
+    "**You can use almost any image size:** 64×64, 128×128, 224×224, 256×256.  "
+    "Just make sure your model expects standard **3-channel (RGB)** colour images."
 )
+st.markdown("")
 
-st.markdown("")  # More white space
-
-st.write("Ready? Scroll down to enter your username and upload your model!")
-
+st.markdown("👇 **Scroll down to enter your username and upload your model. Good luck!**")
 
 username = st.text_input("Enter your username:")
 uploaded_file = st.file_uploader(
