@@ -51,7 +51,7 @@ st.markdown(
 )
 st.markdown("")
 
-st.info(
+st.markdown(
     "Upload your trained `.keras` model, and we’ll run it on our secret set of sign language photos. Once your model's evaluated, your score pops up on the leaderboard. Top the table, and those bragging rights are all yours! 🏆\n\n"
     "You can use almost any image size: 64×64, 128×128, 224×224, 256×256.Just make sure your model expects standard 3-channel (RGB) colour images."
 )
