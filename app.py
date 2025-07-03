@@ -103,7 +103,7 @@ if submit and uploaded_file and username.strip():
                             )
                             save_leaderboard(leaderboard)
                             st.success(
-                                f"Model checked! Your model scored {acc:.2%} on our test set. Your result has been added to the leaderboard."
+                                f"🎉 All done! Your model scored {acc:.2%} on our test set. Your result has been added to the leaderboard."
                             )
                         except Exception as e:
                             st.error(f"Model could not be run on the test set: {e}")
