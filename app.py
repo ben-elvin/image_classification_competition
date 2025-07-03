@@ -50,18 +50,15 @@ st.markdown(
 st.markdown("")
 
 st.info(
-    "Upload your trained `.keras` model, and we’ll secretly run it on a set of sign language photos you haven’t seen. "
-    "If your model nails it, your score pops up on the leaderboard. Top the table, and those bragging rights are all yours! 🏆"
-)
-st.markdown("")
-
-st.success(
+    "Upload your trained `.keras` model, and we’ll run it on our secret set of sign language photos. "
+    "Once your model's evaluated, your score pops up on the leaderboard. Top the table, and those bragging rights are all yours! 🏆"
+    ""
     "**You can use almost any image size:** 64×64, 128×128, 224×224, 256×256.  "
     "Just make sure your model expects standard **3-channel (RGB)** colour images."
 )
 st.markdown("")
 
-st.markdown("👇 **Scroll down to enter your username and upload your model. Good luck!**")
+st.markdown("👇 **Enter your username and upload your model. Good luck!** 👇")
 
 username = st.text_input("Enter your username:")
 uploaded_file = st.file_uploader(
