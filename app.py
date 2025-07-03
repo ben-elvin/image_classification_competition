@@ -65,7 +65,7 @@ uploaded_file = st.file_uploader(
     "Upload your Keras model (`.keras` only)", type=["keras"], accept_multiple_files=False
 )
 st.markdown("")
-col1, col2, col3 = st.columns([1, 2, 1])
+col1, col2, col3 = st.columns([1, 4, 1])
 with col2:
     submit = st.button("🚀 Submit model for evaluation", type="primary")
 
