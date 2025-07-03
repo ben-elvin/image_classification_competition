@@ -64,7 +64,10 @@ username = st.text_input("Enter your username:")
 uploaded_file = st.file_uploader(
     "Upload your Keras model (`.keras` only)", type=["keras"], accept_multiple_files=False
 )
-submit = st.button("Submit model for evaluation")
+st.markdown("")
+col1, col2, col3 = st.columns([1, 2, 1])
+with col2:
+    submit = st.button("🚀 Submit model for evaluation", type="primary")
 
 leaderboard = load_leaderboard()
 raw_images, y_test = load_raw_test_images()
