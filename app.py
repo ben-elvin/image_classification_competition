@@ -58,7 +58,7 @@ st.info(
 )
 st.markdown("")
 
-col1, col2, col3 = st.columns([1, 10, 1])
+col1, col2, col3 = st.columns([1, 12, 1])
 with col2:
     st.markdown("👇 **Fill in your username, upload your model, and join the leaderboard. Good luck!** 👇")
 
