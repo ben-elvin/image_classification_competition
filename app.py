@@ -60,10 +60,49 @@ st.markdown("")
 
 st.markdown("👇 **Fill in your username, upload your model, and join the leaderboard. Good luck!** 👇")
 
-username = st.text_input("Enter your username:")
-uploaded_file = st.file_uploader(
-    "Upload your Keras model (`.keras` only)", type=["keras"], accept_multiple_files=False
+
+ACCENT = "#FF4B4B"
+
+# Username input with red border
+st.markdown(
+    f"""
+    <div style="
+        border: 2px solid {ACCENT};
+        border-radius: 8px;
+        padding: 12px 18px;
+        margin-bottom: 16px;
+        background: rgba(255, 75, 75, 0.04);
+    ">
+        <label style="font-weight: 600; font-size: 1rem;">
+            Enter your username:
+        </label>
+    </div>
+    """,
+    unsafe_allow_html=True
 )
+username = st.text_input("", key="username_highlighted")
+
+# File uploader with red border
+st.markdown(
+    f"""
+    <div style="
+        border: 2px solid {ACCENT};
+        border-radius: 8px;
+        padding: 12px 18px;
+        margin-bottom: 24px;
+        background: rgba(255, 75, 75, 0.04);
+    ">
+        <label style="font-weight: 600; font-size: 1rem;">
+            Upload your Keras model (<code>.keras</code> only):
+        </label>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
+uploaded_file = st.file_uploader("", type=["keras"], accept_multiple_files=False, key="upload_highlighted")
+
+
+
 st.markdown("")
 col1, col2, col3 = st.columns([1, 1, 1])
 with col2:
