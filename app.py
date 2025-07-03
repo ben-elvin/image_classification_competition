@@ -58,7 +58,7 @@ st.info(
 )
 st.markdown("")
 
-col1, col2, col3 = st.columns([1, 1, 1])
+col1, col2, col3 = st.columns([1, 6, 1])
 with col2:
     st.markdown("👇 **Fill in your username, upload your model, and join the leaderboard. Good luck!** 👇")
 
@@ -69,7 +69,7 @@ uploaded_file = st.file_uploader(
 )
 st.markdown("")
 
-col1, col2, col3 = st.columns([1, 6, 1])
+col1, col2, col3 = st.columns([1, 1, 1])
 with col2:
     submit = st.button("Submit model for evaluation", type="primary")
 
