@@ -67,7 +67,7 @@ uploaded_file = st.file_uploader(
 st.markdown("")
 col1, col2, col3 = st.columns([1, 1, 1])
 with col2:
-    submit = st.button("🚀 Submit model for evaluation", type="primary")
+    submit = st.button("Submit model for evaluation", type="primary")
 
 leaderboard = load_leaderboard()
 raw_images, y_test = load_raw_test_images()
