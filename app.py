@@ -58,7 +58,10 @@ st.info(
 )
 st.markdown("")
 
-st.markdown("👇 **Fill in your username, upload your model, and join the leaderboard. Good luck!** 👇")
+col1, col2, col3 = st.columns([1, 1, 1])
+with col2:
+    st.markdown("👇 **Fill in your username, upload your model, and join the leaderboard. Good luck!** 👇")
+
 
 username = st.text_input("Enter your username:")
 uploaded_file = st.file_uploader(
@@ -131,7 +134,9 @@ else:
     leaderboard_display["Accuracy"] = leaderboard_display["Accuracy"].astype(str) + " %"
     st.table(leaderboard_display.sort_values("Accuracy", ascending=False).reset_index(drop=True))
 
-st.info(
+st.divider()
+
+st.markdown(
     "You can submit as many models as you like. "
     "Each submission will appear as a new row in the leaderboard. "
     "Your uploaded model file is deleted after evaluation. "
